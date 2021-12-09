@@ -11,11 +11,11 @@ jest.useFakeTimers()
 // const tree = create(<First navigation={navigation} />)
 
 // test('Navigate To detail Screen', () => {
-    //     const btn = tree.root.findByProps({testID:"btn_navigate"}).props;
-    //     btn.onPress();
+//         const btn = tree.root.findByProps({testID:"btn_navigate"}).props;
+//         btn.onPress();
     
-    //     expect(navigation.navigate).toBeCalledWith('Second');
-    // })
+//         expect(navigation.navigate).toBeCalledWith('Second');
+//     })
     
 const tree = create(<First navigation={undefined} />)
 
