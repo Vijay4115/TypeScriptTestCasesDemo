@@ -54,13 +54,16 @@ export default class First extends React.Component<killer, Ss, {}> {
     let Sdate = String(date);
     return moment(Sdate, "YYYYMMDD").fromNow();
   };
-  fectordata = (item: any) => {
+  fectordata = (item: any, color: any) => {
+    let  clr = "#"+color
+   
+    
     if (item == "Type: Bug") {
       return (
         <View
           style={{
             borderWidth: 1,
-            borderColor: "#fd9b9d",
+            borderColor:clr,
             borderRadius: 15,
             alignItems: "center",
             width: sw * 0.2,
@@ -68,7 +71,7 @@ export default class First extends React.Component<killer, Ss, {}> {
             paddingBottom: 2,
           }}
         >
-          <Text style={{ color: "#fd9b9d", fontSize: 12, fontWeight: "500" }}>
+          <Text style={{ color:clr, fontSize: 12, fontWeight: "500" }}>
             {item}
           </Text>
         </View>
@@ -79,7 +82,7 @@ export default class First extends React.Component<killer, Ss, {}> {
         <View
           style={{
             borderWidth: 1,
-            borderColor: "#fac905",
+            borderColor:clr,
             borderRadius: 15,
             alignItems: "center",
             width: sw * 0.45,
@@ -87,7 +90,7 @@ export default class First extends React.Component<killer, Ss, {}> {
             paddingBottom: 2,
           }}
         >
-          <Text style={{ color: "#fac905", fontSize: 12, fontWeight: "500" }}>
+          <Text style={{ color:clr, fontSize: 12, fontWeight: "500" }}>
             {item}
           </Text>
         </View>
@@ -98,7 +101,7 @@ export default class First extends React.Component<killer, Ss, {}> {
         <View
           style={{
             borderWidth: 1,
-            borderColor: "#d2c3f9",
+            borderColor:clr,
             borderRadius: 15,
             alignItems: "center",
             width: sw * 0.45,
@@ -106,7 +109,7 @@ export default class First extends React.Component<killer, Ss, {}> {
             paddingBottom: 2,
           }}
         >
-          <Text style={{ color: "#d2c3f9", fontSize: 12, fontWeight: "500" }}>
+          <Text style={{ color:clr, fontSize: 12, fontWeight: "500" }}>
             {item}
           </Text>
         </View>
@@ -117,7 +120,7 @@ export default class First extends React.Component<killer, Ss, {}> {
         <View
           style={{
             borderWidth: 1,
-            borderColor: "#97BFB4",
+            borderColor:clr,
             borderRadius: 15,
             alignItems: "center",
             width: sw * 0.3,
@@ -125,7 +128,7 @@ export default class First extends React.Component<killer, Ss, {}> {
             paddingBottom: 2,
           }}
         >
-          <Text style={{ color: "#97BFB4", fontSize: 12, fontWeight: "500" }}>
+          <Text style={{ color:clr, fontSize: 12, fontWeight: "500" }}>
             {item}
           </Text>
         </View>
@@ -136,7 +139,7 @@ export default class First extends React.Component<killer, Ss, {}> {
         <View
           style={{
             borderWidth: 1,
-            borderColor: "#F0BB62",
+            borderColor:clr,
             borderRadius: 15,
             alignItems: "center",
             width: sw * 0.3,
@@ -144,18 +147,19 @@ export default class First extends React.Component<killer, Ss, {}> {
             paddingBottom: 2,
           }}
         >
-          <Text style={{ color: "#F0BB62", fontSize: 12, fontWeight: "500" }}>
+          <Text style={{ color:clr, fontSize: 12, fontWeight: "500" }}>
             {item}
           </Text>
         </View>
       );
     }
     if (item == "CLA Signed") {
+      
       return (
         <View
           style={{
             borderWidth: 1,
-            borderColor: "#009DAE",
+            borderColor:clr,
             borderRadius: 15,
             alignItems: "center",
             width: sw * 0.3,
@@ -163,18 +167,20 @@ export default class First extends React.Component<killer, Ss, {}> {
             paddingBottom: 2,
           }}
         >
-          <Text style={{ color: "#009DAE", fontSize: 12, fontWeight: "500" }}>
+          <Text style={{ color:clr, fontSize: 12, fontWeight: "500" }}>
             {item}
           </Text>
         </View>
       );
     }
     if (item == "React Core Team") {
+
+
       return (
         <View
           style={{
             borderWidth: 1,
-            borderColor: "#E6CCA9",
+            borderColor:clr,
             borderRadius: 15,
             alignItems: "center",
             width: sw * 0.3,
@@ -182,7 +188,7 @@ export default class First extends React.Component<killer, Ss, {}> {
             paddingBottom: 2,
           }}
         >
-          <Text style={{ color: "#E6CCA9", fontSize: 12, fontWeight: "500" }}>
+          <Text style={{ color:clr, fontSize: 12, fontWeight: "500" }}>
             {item}
           </Text>
         </View>
@@ -193,7 +199,7 @@ export default class First extends React.Component<killer, Ss, {}> {
         <View
           style={{
             borderWidth: 1,
-            borderColor: "#AE4CCF",
+            borderColor:clr,
             borderRadius: 15,
             alignItems: "center",
             width: sw * 0.3,
@@ -201,7 +207,7 @@ export default class First extends React.Component<killer, Ss, {}> {
             paddingBottom: 2,
           }}
         >
-          <Text style={{ color: "#AE4CCF", fontSize: 12, fontWeight: "500" }}>
+          <Text style={{ color:clr, fontSize: 12, fontWeight: "500" }}>
             {item}
           </Text>
         </View>
@@ -211,7 +217,7 @@ export default class First extends React.Component<killer, Ss, {}> {
 
   // renderData = (item: any) => {
   //   return (
-    
+
   //   );
   // };
 
@@ -238,14 +244,10 @@ export default class First extends React.Component<killer, Ss, {}> {
             <Text
               testID="Title"
               style={{ color: "#58a6ff", fontWeight: "500", fontSize: 20 }}
-              
-
             >
               facebook / react
             </Text>
           </View>
-          
-          
         </View>
 
         <View style={{ marginTop: sh * 0.1, flexDirection: "row" }}>
@@ -262,7 +264,7 @@ export default class First extends React.Component<killer, Ss, {}> {
                 color: "#fff",
               }}
               autoCorrect={false}
-              autoCapitalize="none"              
+              autoCapitalize="none"
               placeholder="is:issue is:open "
               placeholderTextColor="grey"
               onChangeText={(val) => this.setState({ searchtxt: val })}
@@ -286,9 +288,7 @@ export default class First extends React.Component<killer, Ss, {}> {
               style={{ justifyContent: "center" }}
               onPress={() => this.onChangeInput()}
             >
-              <Text 
-              
-              style={{ color: "#fff" }}>Search</Text>
+              <Text style={{ color: "#fff" }}>Search</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -307,108 +307,176 @@ export default class First extends React.Component<killer, Ss, {}> {
             <FlatList
               testID="flt_data_search"
               data={this.state.searchdata}
-              renderItem={({ item }:any) => (
+              renderItem={({ item }: any) => (
                 <View
-                style={{
-                  borderBottomWidth: 1,
-                  borderColor: "#fff",
-                  paddingTop: 10,
-                  paddingBottom: 20,
-                  paddingLeft: 15,
-                  paddingRight: 10,
-                  borderRadius: 5,
-                }}
-              >
-                <View style={{ flexDirection: "row" }}>
-                  <Text
-                  testID="btn_navigate"
-                    onPress={() =>
-                      this.props.navigation.navigate("Second", { id: item.number })
-                    }
-                    style={{ color: "#fff", paddingRight: 45 }}
-                  >
-                    {item.title}
-                  </Text>
-                </View>
-        
-                <View style={{ marginLeft: 40 }}>
-                  <View
-                    style={{ justifyContent: "space-between", flexDirection: "row" }}
-                  >
-                    {item.labels[0] ? this.fectordata(item.labels[0].name) : null}
-                    {item.labels[1] ? this.fectordata(item.labels[1].name) : null}
+                  style={{
+                    borderBottomWidth: 1,
+                    borderColor: "#fff",
+                    paddingTop: 10,
+                    paddingBottom: 20,
+                    paddingLeft: 15,
+                    paddingRight: 10,
+                    borderRadius: 5,
+                  }}
+                >
+                  <View style={{ flexDirection: "row" }}>
+                    <Text
+                      testID="btn_navigate"
+                      onPress={() =>
+                        this.props.navigation.navigate("Second", {
+                          id: item.number,
+                        })
+                      }
+                      style={{ color: "#fff", paddingRight: 45 }}
+                    >
+                      {item.title}
+                    </Text>
+                  </View>
+
+                  <View style={{ marginLeft: 40 }}>
+                    <View
+                      style={{
+                        justifyContent: "space-between",
+                        flexDirection: "row",
+                      }}
+                    >
+                      {item.labels[0]
+                        ? this.fectordata(
+                            item.labels[0].name,
+                            item.labels[0].color
+                          )
+                        : null}
+                      {item.labels[1]
+                        ? this.fectordata(
+                            item.labels[1].name,
+                            item.labels[1].color
+                          )
+                        : null}
+                    </View>
+                    <View
+                      style={{
+                        justifyContent: "space-between",
+                        flexDirection: "row",
+                      }}
+                    >
+                      {item.labels[2]
+                        ? this.fectordata(
+                            item.labels[2].name,
+                            item.labels[2].color
+                          )
+                        : null}
+                      {item.labels[3]
+                        ? this.fectordata(
+                            item.labels[3].name,
+                            item.labels[3].color
+                          )
+                        : null}
+                    </View>
                   </View>
                   <View
-                    style={{ justifyContent: "space-between", flexDirection: "row" }}
+                    style={{
+                      marginLeft: 40,
+                      marginTop: 10,
+                      flexDirection: "row",
+                    }}
                   >
-                    {item.labels[2] ? this.fectordata(item.labels[2].name) : null}
-                    {item.labels[3] ? this.fectordata(item.labels[3].name) : null}
+                    <Text style={{ color: "#fff" }}>#{item.number} opened</Text>
+                    <Text style={{ color: "#fff", marginLeft: 10 }}>
+                      {this.formatdate(item.created_at)}
+                    </Text>
+                    <Text style={{ color: "#fff", marginLeft: 10 }}>
+                      by {item.user.login}
+                    </Text>
                   </View>
                 </View>
-                <View style={{ marginLeft: 40, marginTop: 10, flexDirection: "row" }}>
-                  <Text style={{ color: "#fff" }}>#{item.number} opened</Text>
-                  <Text style={{ color: "#fff", marginLeft: 10 }}>
-                    {this.formatdate(item.created_at)}
-                  </Text>
-                  <Text style={{ color: "#fff", marginLeft: 10 }}>
-                    by {item.user.login}
-                  </Text>
-                </View>
-              </View>
               )}
             />
           ) : (
             <FlatList
               testID="flt_data"
               data={this.state.apidata}
-              renderItem={({ item }:any) => (
+              renderItem={({ item }: any) => (
                 <View
-                style={{
-                  borderBottomWidth: 1,
-                  borderColor: "#fff",
-                  paddingTop: 10,
-                  paddingBottom: 20,
-                  paddingLeft: 15,
-                  paddingRight: 10,
-                  borderRadius: 5,
-                }}
-              >
-                <View style={{ flexDirection: "row" }}>
-                  <Text
-                  testID="btn_navigate"
-                    onPress={() =>
-                      this.props.navigation.navigate("Second", { id: item.number })
-                    }
-                    style={{ color: "#fff", paddingRight: 45 }}
-                  >
-                    {item.title}
-                  </Text>
-                </View>
-        
-                <View style={{ marginLeft: 40 }}>
-                  <View
-                    style={{ justifyContent: "space-between", flexDirection: "row" }}
-                  >
-                    {item.labels[0] ? this.fectordata(item.labels[0].name) : null}
-                    {item.labels[1] ? this.fectordata(item.labels[1].name) : null}
+                  style={{
+                    borderBottomWidth: 1,
+                    borderColor: "#fff",
+                    paddingTop: 10,
+                    paddingBottom: 20,
+                    paddingLeft: 15,
+                    paddingRight: 10,
+                    borderRadius: 5,
+                  }}
+                >
+                  <View style={{ flexDirection: "row" }}>
+                    <Text
+                      testID="btn_navigate"
+                      onPress={() =>
+                        this.props.navigation.navigate("Second", {
+                          id: item.number,
+                        })
+                      }
+                      style={{ color: "#fff", paddingRight: 45 }}
+                    >
+                      {item.title}
+                    </Text>
+                  </View>
+
+                  <View style={{ marginLeft: 40 }}>
+                    <View
+                      style={{
+                        justifyContent: "space-between",
+                        flexDirection: "row",
+                      }}
+                    >
+                      {item.labels[0]
+                        ? this.fectordata(
+                            item.labels[0].name,
+                            item.labels[0].color
+                          )
+                        : null}
+                      {item.labels[1]
+                        ? this.fectordata(
+                            item.labels[1].name,
+                            item.labels[1].color
+                          )
+                        : null}
+                    </View>
+                    <View
+                      style={{
+                        justifyContent: "space-between",
+                        flexDirection: "row",
+                      }}
+                    >
+                      {item.labels[2]
+                        ? this.fectordata(
+                            item.labels[2].name,
+                            item.labels[2].color
+                          )
+                        : null}
+                      {item.labels[3]
+                        ? this.fectordata(
+                            item.labels[3].name,
+                            item.labels[3].color
+                          )
+                        : null}
+                    </View>
                   </View>
                   <View
-                    style={{ justifyContent: "space-between", flexDirection: "row" }}
+                    style={{
+                      marginLeft: 40,
+                      marginTop: 10,
+                      flexDirection: "row",
+                    }}
                   >
-                    {item.labels[2] ? this.fectordata(item.labels[2].name) : null}
-                    {item.labels[3] ? this.fectordata(item.labels[3].name) : null}
+                    <Text style={{ color: "#fff" }}>#{item.number} opened</Text>
+                    <Text style={{ color: "#fff", marginLeft: 10 }}>
+                      {this.formatdate(item.created_at)}
+                    </Text>
+                    <Text style={{ color: "#fff", marginLeft: 10 }}>
+                      by {item.user.login}
+                    </Text>
                   </View>
                 </View>
-                <View style={{ marginLeft: 40, marginTop: 10, flexDirection: "row" }}>
-                  <Text style={{ color: "#fff" }}>#{item.number} opened</Text>
-                  <Text style={{ color: "#fff", marginLeft: 10 }}>
-                    {this.formatdate(item.created_at)}
-                  </Text>
-                  <Text style={{ color: "#fff", marginLeft: 10 }}>
-                    by {item.user.login}
-                  </Text>
-                </View>
-              </View>
               )}
             />
           )}
