@@ -237,6 +237,8 @@ export default class First extends React.Component<killer, Ss, {}> {
   };
 
   render() {
+    const {searchtxt} = this.state;
+    const {navigate} = this.props.navigation;
     return (
       <SafeAreaView style={{ flex: 2, backgroundColor: "#131212" }}>
         <View style={{ marginTop: sh * 0.05 }}>
@@ -268,7 +270,7 @@ export default class First extends React.Component<killer, Ss, {}> {
               placeholder="is:issue is:open "
               placeholderTextColor="grey"
               onChangeText={(val) => this.setState({ searchtxt: val })}
-              value={this.state.searchtxt}
+              value={searchtxt}
             />
           </View>
 
@@ -323,7 +325,7 @@ export default class First extends React.Component<killer, Ss, {}> {
                     <Text
                       testID="btn_navigate"
                       onPress={() =>
-                        this.props.navigation.navigate("Second", {
+                        navigate("Second", {
                           id: item.number,
                         })
                       }

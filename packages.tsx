@@ -5,16 +5,12 @@
 // yarn add --dev @babel/core @types/enzyme @types/jest @types/react-test-renderer enzyme enzyme-adapter-react-16 jest  
 // jest-cucumber jest-expo react-test-renderer
 
-// // Package.json Jest Config
+// Package.json Jest Config
 
-// // "scripts": {
-// //     "start": "expo start",
-// //     "android": "expo start --android",
-// //     "ios": "expo start --ios",
-// //     "web": "expo start --web",
-// //     "eject": "expo eject",
-//      "test": "jest"
-// //   },
+// "scripts": {
+//    ......
+//     "test": "jest"
+//   },
 
 
 // "jest": {

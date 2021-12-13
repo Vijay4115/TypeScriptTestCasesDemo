@@ -55,7 +55,9 @@ test("Second Api testing",async()=>{
         
             expect(response.data).not.toBeNull();
         
-      });
+      }).catch((e)=>console.log(e)
+      )
+      
       
       
 })
