@@ -19,6 +19,12 @@ jest.useFakeTimers()
     
 const tree = create(<First navigation={undefined} />)
 
+test('Macth SnapShot', () => {
+        let ss = tree.toJSON();
+        expect(ss).toMatchSnapshot()
+})
+
+
 test("Component  Check",()=>{
     let txtinput = tree.root.findByProps({testID:"txt_search"}).props;
     let Title = tree.root.findByProps({testID:"Title"}).props;

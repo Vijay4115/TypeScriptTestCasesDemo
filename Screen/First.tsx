@@ -215,11 +215,6 @@ export default class First extends React.Component<killer, Ss, {}> {
     }
   };
 
-  // renderData = (item: any) => {
-  //   return (
-
-  //   );
-  // };
 
   onChangeInput = () => {
     let val = this.state.searchtxt;
@@ -238,7 +233,7 @@ export default class First extends React.Component<killer, Ss, {}> {
 
   render() {
     const {searchtxt} = this.state;
-    const {navigate} = this.props.navigation;
+    const {navigation} = this.props;
     return (
       <SafeAreaView style={{ flex: 2, backgroundColor: "#131212" }}>
         <View style={{ marginTop: sh * 0.05 }}>
@@ -325,7 +320,7 @@ export default class First extends React.Component<killer, Ss, {}> {
                     <Text
                       testID="btn_navigate"
                       onPress={() =>
-                        navigate("Second", {
+                        navigation.navigate("Second", {
                           id: item.number,
                         })
                       }
